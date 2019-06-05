@@ -14,7 +14,6 @@ import com.yash.book.ticket.app.enties.Ticket;
 import com.yash.book.ticket.app.service.TicketBookingService;
 
 @RestController
-@RequestMapping(value="/api/tickets")
 public class TicketBookingController {
 
 	@Autowired
@@ -31,7 +30,7 @@ public class TicketBookingController {
 		
 		return ticketBookingService.getTicketById(ticketId);
 	}
-	@GetMapping(value="/getAllTickets")
+	@GetMapping(value="/")
 	public Iterable<Ticket> getAllBookedTicket(){
 		
 		return ticketBookingService.getAllBookedTicket();
